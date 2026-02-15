@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Une page représentant mon CV complet pour apprendre à me connaître et voir mes compétences de codage !">
+    <meta name="keywords" content="CV, Curriculum vitae, Hayem Ben Harrath, Informatique, développement web, HTML, CSS, Full-stack">
+    <meta name="author" content="Hayem Ben Harrath">
+    <meta name="robots" content="index, nofollow">
+    <title>Mon CV</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8em;
+            text-transform: uppercase;
+            color: #34495e;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #16a085;
+            margin-bottom: 0.5em;
+        }
+
+        h3, h4 {
+            color: #2980b9;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h3::before {
+            content: "📝 ";
+            font-size: 1.2em;
+        }
+
+        h4::before {
+            content: "💡 ";
+            font-size: 1em;
+        }
+
+        img {
+            display: block;
+            max-width: 180px;
+            border-radius: 50%;
+            margin: 15px auto;
+            border: 3px solid #16a085;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+            text-indent: 1em;
+            font-size: 1em;
+            letter-spacing: 0.5px;
+            color: #2c3e50;
+        }
+
+        b::after {
+            content: " 🔹";
+        }
+
+        i {
+            color: #e67e22;
+            font-style: italic;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #c0392b;
+            text-decoration: underline;
+        }
+
+        a[target="_blank"]::after {
+            content: " 🔗";
+            font-size: 0.8em;
+        }
+
+        a[download] {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        a[href^="mailto:"] {
+            color: #27ae60;
+        }
+
+        ul, ol {
+            margin-left: 2em;
+            padding: 5px;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+            line-height: 1.4;
+        }
+
+        ul li::before {
+            content: "• ";
+            color: #16a085;
+            font-weight: bold;
+        }
+
+        ol li::before {
+            font-weight: bold;
+        }
+
+        li:first-child {
+            font-style: italic;
+        }
+
+        li:last-child {
+            color: #8e44ad;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            color: #16a085;
+            text-align: left;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ecf0f1;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #d1f0e3;
+        }
+
+        dl dt {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        dl dd {
+            margin-left: 1em;
+            font-style: italic;
+        }
+
+        nav > ol {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            list-style-type: upper-roman;
+        }
+
+        nav > ol > li + li {
+            margin-top: 5px;
+        }
+
+        .description {
+            font-family: 'Courier New', monospace;
+            background-color: #e8f6f3;
+            padding: 12px;
+            border-left: 5px solid #1abc9c;
+            border-radius: 4px;
+            overflow: auto;
+        }
+
+        #contact {
+            color: #8e44ad;
+            font-weight: bold;
+        }
+
+        address {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-left: 5px solid #8e44ad;
+            display: block;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+
+        time {
+            font-weight: bold;
+            color: #c0392b;
+            font-style: normal;
+        }
+
+        h3 + hr {
+            border: 1px dashed #7f8c8d;
+            margin-bottom: 1em;
+        }
+
+        a:visited {
+            color: #7f8c8d;
+        }
+
+        a:active {
+            color: #e67e22;
+        }
+
+        pre.description::before {
+            content: "💬 ";
+        }
+
+        table th, table td {
+            transition: all 0.3s ease;
+        }
+
+        table td:hover {
+            background-color: #dff9f1;
+            cursor: pointer;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #bdc3c7;
+            margin: 2em 0;
+        }
+
+        a[href*="unistra"] {
+            text-decoration: underline dotted;
+            color: #2980b9;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>CURRICULUM VITAE</h1>
+    <h2>Hayem BEN HARRATH</h2>
+    <img src="./image.jpg" alt="Une photo représentative de moi">
+
+    <p>Bienvenue dans mon CV! Lisez tout pour apprendre à me connaître :)</p>
+    <p>Pour <b>m'évaluer</b>, vous pouvez cliquer <a href="./tp1.txt" download>ICI</a> pour <b>télécharcher</b> le sujet du TP1 ou <a href="https://moodle.unistra.fr/mod/page/view.php?id=429080" target="_blank">ICI</a> pour le visualiser. Bonne lecture!</p>
+
+    <!--1 : MENU DE NAVIGATION-->
+    <h3>MENU DE NAVIGATION :</h3>
+    <p>Utilisez ce menu de navigation pour vous aider à vous repérer dans ce CV.</p>
+    <nav>
+        <ol type="I" start="1">
+            <li>Rubrique <a href="#description">"DESCRIPTION"</a></li>
+            <li>Rubrique <a href="#etudes">"PARCOURS SCOLAIRE"</a></li>
+            <li>Rubrique <a href="#experiencespro">"EXPERIENCES PROFESSIONNELLES"</a></li>
+            <li>Rubrique <a href="#competences">"COMPETENCES GENERALES"</a></li>
+            <li>Rubrique <a href="#contact">"CONTACT"</a></li>
+        </ol>
+    </nav>
+
+    <hr>
+
+    <!--2 : DESCRIPTION-->
+    <h3 id="description">PETITE DESCRIPTION DE MOI :</h3>
+
+    <pre class="description">Je m'appelle Hayem Ben Harrath et je suis étudiante en première année de Licence Informatique à l'UFR de Strasbourg. 
+Passionnée par l'informatique, je rêve de devenir une développeuse Full-stack. Je vous laisse lire la suite pour plus d'informations :)
+Pour rappel, voici la définition d'un développeur Full-stack :</pre>
+    <dl>
+        <dt>Développeur Full-stack :</dt>
+        <dd>Un développeur full stack est un développeur web capable de réaliser la programmation d’un site ou d'une application web à la fois en front-end et back-end.</dd>
+    </dl>
+
+    <hr>
+
+    <!--3 : PARCOURS SCOLAIRE-->
+
+    <h3 id="etudes">MON PARCOURS SCOLAIRE :</h3>
+    <p>Voici une courte chronologie de mon parcours scolaire durant ces dernières années</p>
+
+    <table>
+        <caption>Mon parcours scolaire</caption>
+
+
+        <thead>
+            <tr>
+                <th>DUREE</th>
+                <th>EVENEMENT/FORMATION</th>
+                <th>LIEU</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Depuis <time datetime="2025-09-05">le 5 septembre 2025 </time></td>
+                <td>Licence 1 d'informatique</td>
+                <td>UFR de mathématiques et d'informatique de Strasbourg</td>
+            </tr>
+
+            <tr>
+                <td>Le <time datetime="2023-06-12">12 juin 2023</time></td>
+                <td>Obtention de mon baccalauréat général</td>
+                <td>Lycée International Les Pontonniers de Strasbourg</td>
+            </tr>
+
+            <tr>
+                <td>Du <time datetime="2015-09-05">5 septembre 2015</time> au <time datetime="2019-07-02">2 juillet 2019</time></td>
+                <td>Scolarisation complète au collège</td>
+                <td>Collège Rouget de Lisle à Schiltigheim</td>
+            </tr>
+
+            <tr>
+                <td>De <time datetime="2010">2010</time> à <time datetime="2015">2015</time></td>
+                <td>Scolarisation complète en école primaire</td>
+                <td>Ecole Exen Pire à Schiltigheim</td>
+            </tr>
+
+            <tr>
+                <td>De <time datetime="2007">2007</time> à <time datetime="2010">2010</time></td>
+                <td>Scolarisation complète en petite section</td>
+                <td>Ecole maternelle Léo Délibes à Schiltigheim</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>DUREE</th>
+                <th>EVENEMENT/FORMATION</th>
+                <th>LIEU</th>
+            </tr>
+        </tfoot>
+        
+    </table>
+
+    <hr>
+
+    <!--4: EXPERIENCES PROFESSIONNELLES-->
+    <h3 id="experiencespro">MES EXPERIENCES PROFESSIONNELLES :</h3>
+    <p>Je suis depuis toujours étudiante, donc je n'ai pas beaucoup travaillé en entreprise pour le moment..<br>
+        Cependant, j'ai tout de même quelques expériences professionnelles, rassemblées dans le tableau ci-dessous : </p>
+    
+    <table>
+        <caption>Mes expériences professionnelles</caption>
+
+        <thead>
+            <tr>
+                <th>DUREE</th>
+                <th>ACTIVITE</th>
+                <th>ENTREPRISE</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Depuis le <time datetime="2025-08-12">12 août 2025</time> jusqu'à maintenant</td>
+                <td>J'ai commencé une formation Dev Web et Web Mobile chez le <a href="https://www.centre-europeen-formation.fr/" target="_blank"><abbr>CEF</abbr></a>. Pour le moment, je n'en suis que au début mais j'adore ce que je fais!</td>
+                <td><a href="https://www.centre-europeen-formation.fr/" target="_blank">CEF</a></td>
+            </tr>
+
+            <tr>
+                <td>Eté <time datetime="2025">2025</time> (de juin à août inclus)</td>
+                <td>Vendeuse polyvalente</td>
+                <td>Grand Frais de Hautepierre</td>
+            </tr>
+
+            <tr>
+                <td>Eté <time datetime="2023">2023</time> (de mai à août inclus)</td>
+                <td>Mobilisatrice d'intérêt général</td>
+                <td>Voix Publique, Strasbourg</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!--5 : COMPETENCES GENERALES-->
+    
+    <h3 id="competences">MES COMPETENCES ET CONNAISSANCES GENERALES</h3>
+    <p>Ci-dessous un regroupement de mes compétences générales classées par type :)</p>
+
+    <h4>Informatique</h4>
+    <p>Eh oui, il fallait bien que je fasse un commentaire sur <i>mes pauvres compétences</i> en informatique!! Je ne suis qu'en L1 donc je ne sais pas encore faire grand chose, si ce n'est coder des petits projets Python et faire des designs en Front-End..<br>
+        Voici tout de même une liste de quelques projets Python que je mène en parallèle de mes études (car j'adore créer mes petits jeux):</p>
+
+        <ul>
+            <li>Projet jeu de CALCULATRICE (mode console) : <a href="./calculatrice.py" download>TELECHARGEMENT ICI</a></li>
+            <li>Projet jeu de PENDU (mode console) : <a href="./pendu.py">TELECHARGEMENT ICI</a> </li>
+        </ul>
+
+    <hr>
+
+
+    <!--LANGUES-->
+    <h4>Langues</h4>
+        <p>Mon rapport aux langues étrangères : </p>
+        <ul>
+            <li>FRANCAIS : Le français est ma langue maternelle, je la maîtrise, autant à l'oral qu'à l'écrit :)</li>
+            <li>ALLEMAND : Depuis l'école primaire, je suis en section ABIBAC option Allemand, et je suis par la suite entrée en section OIB allemande au lycée international Les Pontonniers. J'ai donc un niveau C1 en Allemand</li>
+            <li>ANGLAIS : J'ai commencé à apprendre l'anglais en première année de collège et j'en fais depuis. Mon utilisation des réseaux sociaux m'a permis d'acquérir un niveau C1 dans cette langue.</li>
+            <li>ARABE : Je le comprends légèrement mais je ne le parle pas vraiment. Cependant, je projette de l'apprendre dans le futur!</li>
+        </ul>
+
+    <hr>
+
+    <!--SPORTS-->
+    <h4>Sports</h4>
+        <p>Voici une liste des sports que j'aime pratiquer selon un ordre de préférence : </p>
+        <ol>
+            <li>La NATATION : il s'agit de loin de mon sport préféré! J'en fais depuis toute petite grâce à mes parents qui m'avaient inscrite à un club! J'adore cette sensation de liberté quand on nage :)</li>
+            <li>La MARCHE : mon deuxième sport préféré. Il me permet de découvrir des lieux et de m'aérer l'esprit!</li>
+            <li>Le VÉLO : j'avoue que j'en fais pas souvent mais je l'adore quand même surtout quand je veux me déplacer rapidement :)</li>
+            <li>Et enfin, le BADMINTON : un sport que je ne fais plus depuis longtemps mais que je recommencerai sûrement un jour. J'aime son dynamisme et sa précision!</li>
+        </ol>
+
+    <hr>
+
+    
+
+    <!--6 : RUBRIQUE DE CONTACT-->
+
+    <h4 id="contact">CONTACT :</h4>
+    <address class="contact">
+        <p> <strong>NOM : </strong>BEN HARRATH</p>
+        <p> <strong>PRENOM : </strong>Hayem</p>
+        <p> <a href="https://share.google/h1OgjVux47mnWjeUo" target="_blank">ADRESSE : 7 Rue René Descartes, 67000, STRASBOURG </a></p>
+        <p> <a href="mailto:hayem.ben-harrath2@etu.unistra.fr"> Contactez-moi par mail via : <em>hayem.ben-harrath2@etu.unistra.fr</em></a></p>
+        <p> <a href="tel:0648759684">Ou alors par téléphone au : 06-48-75-96-84</a></p>
+        <p> <a href="https://www.instagram.com/" target="_blank">Mon compte Instagram</a></p>
+
+    </address>
+
+    
+    
+</body>
+
+</html>

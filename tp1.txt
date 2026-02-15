@@ -1,0 +1,320 @@
+Passer au contenu principal <#maincontent>
+Conditions d’achèvement
+
+
+    Objectifs
+
+En première partie, créez un document web avec des éléments sémantiques
+de contenu uniquement, à savoir, les éléments et les attributs vus
+pendant le premier cours HTML. En seconde partie, le document sera mis
+en forme par CSS, uniquement des CSS appliquées aux éléments de
+contenu. *Aucun */*design*/* n’est demandé ici*.
+
+Le thème de votre document sera un CV, votre curriculum vitae, contenant
+vos références personnelles, vos nom et prénom, votre adresse
+électronique, les médias sociaux et les liens de réseaux sociaux, et
+(*éventuellement des valeurs factices*) votre adresse postale et votre
+numéro de téléphone. Mettez également en évidence votre parcours
+d'études au cours des dernières années, votre expérience
+professionnelle, vos connaissances et compétences dans divers domaines,
+votre pratiques des langues étrangères et votre niveau, vos compétences
+informatiques et logicielles, vos loisirs, etc…
+
+
+    Partie 1 : structuration HTML d’une page web (50mn)
+
+
+    Description technique
+
+*Votre document web ne doit contenir que des balises sémantiques de
+contenu* (voir liste non exhaustive ci-dessous), à savoir des éléments
+HTML, et leurs attributs, pour structurer le contenu, *et
+impérativement, un choix pertinent d'éléments sémantiques*. Faites
+attention à ne pas utiliser des éléments et/ou attributs obsolètes (Voir
+la documentation MDN) !
+
+*Certains éléments ne doivent pas être utilisés*, tels que l’élément
+neutre div, ou les éléments de sectionnement, qui seront vus plus tard
+dans notre cours (header, footer, article, section, side, nav, ...).
+
+De cette façon, on ne s'attend pas à une "belle" page web, mais à un
+contenu cohérent avec le balisage sémantique du HTML5.
+
+
+    Liste des éléments suggérés (à documenter)
+
+(h1, h2, ..., h6), p, br, hr, img, a, (ul, ol, li), (dl, dt,
+dd), (table, thead, tfoot, tbody, tr, td, th, ...), ... , 
+
+et les éléments de forte sémantique qui s'appliquent au contenu des
+textes comme : 
+
+(strong, b, em, i), (sub, sup),  code, abbr, time, ... .
+
+La structure initiale d’un document HTML étant :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+ 
+
+Voir aussi la documentation MDN Web Docs & le W3C Working Draft, où les
+éléments sont regroupés par catégories :
+
+Text Content : https://developer.mozilla.org/en-US/docs/Web/HTML/
+Element#Text_content <https://developer.mozilla.org/en-US/docs/Web/HTML/
+Element#Text_content>
+
+Inline text semantics : https://developer.mozilla.org/en-US/docs/Web/
+HTML/Element#Inline_text_semantics <https://developer.mozilla.org/en-US/
+docs/Web/HTML/Element#Inline_text_semantics>
+
+Table content : https://developer.mozilla.org/en-US/docs/Web/HTML/
+Element#Table_content <https://developer.mozilla.org/en-US/docs/Web/
+HTML/Element#Table_content>
+
+Grouping content : https://www.w3.org/TR/html53/grouping-
+content.html#grouping-content <https://www.w3.org/TR/html53/grouping-
+content.html#grouping-content>
+
+Text-level semantics : https://www.w3.org/TR/html53/textlevel-
+semantics.html#textlevel-semantics <https://www.w3.org/TR/html53/
+textlevel-semantics.html#textlevel-semantics>
+
+Tabular data : https://www.w3.org/TR/html53/tabular-data.html#tabular-
+data <https://www.w3.org/TR/html53/tabular-data.html#tabular-data>
+
+ 
+
+
+    Partie 2 : balises d’en-tête (20mn)
+
+Nous avons vu en cours quelques balises à placer dans l’en-tête d’un
+document HTML. Certaines permettent de préciser des informations sur le
+contenu de la page web, d’autres de référencer des documents, ou encore
+d’écrire des scripts.
+
+1.      Insérer les balises d’en-tête “description”, “keywords”,
+“author”. Renseigner les attributs “content” avec des valeurs adaptées
+au contenu de votre page.
+
+2.      Intégrer dans votre en-tête la balise méta relative au viewport.
+Quel est son intérêt ?
+
+3.      Définissez l’encodage de votre page web avec la balise <meta
+charset="...">. Quel est l’intérêt d’encoder les documents en utf-8 ?
+
+
+    Partie 3 - Mise en forme de texte avec CSS (50mn)
+
+Vous pouvez désormais appliquer un style à votre texte, par ex. avec des
+polices du web, des propriétés CSS de formatage du texte appliquées à
+l’aide de sélecteurs appropriés, à savoir les éléments sémantique du
+contenu, mais aussi les style de listes, de liens, de boîtes et de tableaux.
+
+Les sélecteurs à utiliser sont les sélecteurs de base (élément, classe,
+id), les sélecteurs /enfants/ (/child/) ainsi que frères (/sibling/),
+les sélecteurs d'attributs, les pseudo-classes et les pseudo-éléments.
+
+Propriétés CSS suggérées (voir également les références des notes de cours)
+
+/Text/ et /font/ :    
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/
+Fundamentals <https://developer.mozilla.org/en-US/docs/Learn/CSS/
+Styling_text/Fundamentals>             
+
+/Styling Boxes/ : https://developer.mozilla.org/en-US/docs/Learn/CSS/
+Styling_boxes <https://developer.mozilla.org/en-US/docs/Learn/CSS/
+Styling_boxes>
+
+/Styling Tables/ : https://developer.mozilla.org/fr/docs/Web/CSS/
+CSS_Table <https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Table>
+
+*Techniques CSS strictement interdites* dans cet exercice : Grid et Flexbox!
+
+En effet, nous n'attendons pas une mise en page générale de votre page
+web, pas de design, c'est-à-dire pas de positionnement, ni de CSS
+appliqué aux balises sémantiques d’organisation des contenus (comme div,
+section, article, nav, ... ) que vous n'avez pas utilisées jusqu'à
+présent (ce sera le sujet de notre prochain cours).
+
+
+    Auto-évaluation
+
+*Une auto-évaluation est prévue pour ce TP. Elle doit être effectuée
+avant la limite de rendu indiquée dans l'activité d'auto-évaluation*.
+
+D’une part, vous devez vérifier la validation W3C : https://
+validator.w3.org/nu/#textarea <https://validator.w3.org/nu/#textarea> ,
+qui retournera le nombre d’alertes (Warnings) et/ou d’erreurs (Errors).
+Ces valeurs seront à renseigner sur Moodle.
+
+Une application web permet d’évaluer votre travail, CV HTML, suivez le
+lien depuis Moodle, copiez / collez votre code, un score sera calculé.
+
+Reportez les résultats de la validation W3C et votre score dans
+l’enquête ouverte sur Moodle, et téléversez vos fichiers . Attention,
+vous ne pouvez répondre à l’enquête qu’une seule fois. 
+
+
+    Exemple d’un CV en HTML (image intentionnellement floue) :
+
+
+    Exemple de la mise en forme CSS (image intentionnellement floue) :
+
+Modifié le: mardi 27 janvier 2026, 10:50
+
+
+    Messagerie
+
+// <#>
+// //
+//
+<#>
+Contacts
+// <#>
+Messages sélectionnés : 1
+×
+
+Rechercher des personnes et des messages
+//
+// <#>
+// Contacts 0 Il y a 0 demandes de contact en attente <#>
+// //
+//
+<#>
+Rechercher des personnes et des messages
+// //
+
+// //
+//
+<#>
+Paramètres
+
+  * Contacts <#contacts-tab-panel-699230386749669923038642203>
+  * Demandes 0 Il y a 0 demandes de contact en attente <#requests-tab-
+    panel-699230386749669923038642203>
+
+Aucun contact
+//
+Aucune demande de contact
+//
+
+Demande de contact envoyée
+
+Espace personnel
+
+Enregistrer des brouillons, liens, note, etc. pour un usage ultérieur.
+
+//
+
+Supprimer pour moi et et pour tous les autres
+Bloc // Débloquer // Retirer // Ajouter // Supprimer // Supprimer //
+Envoyer une demande de contact // Accepter et ajouter aux contacts //
+Décliner //
+OK
+
+Annuler
+
+// // // Favoris () conversations // Il y a conversations non lues
+
+Aucune conversation favorite
+
+//
+//
+// // // Groupe () conversations // Il y a conversations non lues
+
+Pas de conversation de groupe
+
+//
+//
+// // // Privée () conversations // Il y a conversations non lues
+
+Pas de conversation privée
+
+//
+//
+
+
+      Contacts
+
+
+      Non contact
+
+Charger plus //
+
+
+      Messages personnels
+
+Charger plus //
+
+Aucun résultat
+//
+
+Rechercher des personnes et des messages
+
+
+      Confidentialité
+
+Vous pouvez choisir qui peut vous envoyer un message personnel
+
+Accepter des messages de :
+
+Mes contacts seulement
+Mes contacts et tout le monde dans mes cours
+
+
+      Préférences de notification
+
+
+      Général
+
+Taper entrée pour envoyer
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+/
+
+/
+//
+
+// //
+
+// // Supprimer les messages sélectionnés
+
+Envoyer une demande de contact //
+
+Vous avez bloqué cet utilisateur.
+
+Débloquer l’utilisateur //
+
+Vous ne pouvez pas envoyer un message à cet utilisateur
+
+Tout afficher <https://moodle.unistra.fr/message/index.php>
